@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'net.runemc'
+version = 'v0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation('io.netty:netty-all:4.1.24.Final')
+    implementation("com.google.protobuf:protobuf-java:4.29.0")
+}
+
+test {
+    useJUnitPlatform()
+}
